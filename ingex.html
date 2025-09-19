@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Transport</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+      padding: 30px;
+      min-height: 100vh;
+    }
+    .booking-form {
+      background: #ffffffee;
+      padding: 28px;
+      border-radius: 12px;
+      max-width: 430px;
+      margin: auto;
+      box-shadow: 0 4px 16px rgba(78, 84, 200, 0.13);
+    }
+    .booking-form h2 {
+      margin-bottom: 22px;
+      color: #4e54c8;
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+    .booking-form label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 4px;
+      color: #444;
+      font-weight: 500;
+    }
+    .booking-form input, .booking-form select {
+      width: 100%;
+      padding: 9px;
+      border: 1px solid #8f94fb;
+      border-radius: 5px;
+      margin-bottom: 14px;
+      background: #f9faff;
+      font-size: 15px;
+      color: #333;
+      transition: border 0.2s;
+    }
+    .booking-form input:focus, .booking-form select:focus {
+      border: 2px solid #4e54c8;
+      outline: none;
+    }
+    .booking-form button {
+      background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 8px;
+      box-shadow: 0 2px 8px rgba(78, 84, 200, 0.13);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .booking-form button:hover {
+      background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <form class="booking-form">
+    <h2>Book Your Transport</h2>
+    <label for="transport-type">Transport Type</label>
+    <select id="transport-type" name="transport-type" required>
+      <option value="">Select</option>
+      <option value="taxi">Taxi</option>
+      <option value="bus">Bus</option>
+      <option value="van">Van</option>
+      <option value="bike">Bike</option>
+    </select>
+
+    <label for="pickup">Pickup Location</label>
+    <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
+
+    <label for="dropoff">Drop-off Location</label>
+    <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required>
+
+    <label for="date">Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Time</label>
+    <input type="time" id="time" name="time" required>
+
+    <button type="submit">Book Now</button>
+  </form>
+</body>
+</html>
